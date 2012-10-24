@@ -1,7 +1,7 @@
 public class IntegerTreeNode implements Tree {
-  int value;
-  IntegerTreeNode left;
-  IntegerTreeNode right;
+  private int value;
+  private IntegerTreeNode left;
+  private IntegerTreeNode right;
   
   public IntegerTreeNode(int newNumber) {
   this.value = newNumber;
@@ -46,7 +46,7 @@ public class IntegerTreeNode implements Tree {
   }
 
   public int getMax() {
-	  int max = value;
+	   int max = value;
 	  if (right == null) {
 		return max;
 	  }
@@ -56,7 +56,7 @@ public class IntegerTreeNode implements Tree {
   }
   
   public int getMin() {
-  int min = value;
+   int min = value;
   if (left == null) {
   return min;
   }
@@ -64,4 +64,51 @@ public class IntegerTreeNode implements Tree {
 	return left.getMin();
 	}
   }
+
+   public String toString() {
+   String result = "[" + value + " L[";
+	//if (this.left == null) {
+	//result = result + "]"
+	//} else {
+	  
+  
+  
+  
+  
+  
+  return (result);
+  }
+  
+  
+  
+  public int depth() {
+  int counterLeft = 0;
+  int counterRight = 0;
+  IntegerTreeNode temp = this;
+  IntegerTreeNode temp2 = this;
+	while (temp.left != null) {
+	counterLeft++;
+	temp = temp.left;
+	}
+	while (temp2.right != null) {
+	counterRight++;
+	temp2 = temp2.right;
+	}
+	if (counterLeft > counterRight) {
+	return counterLeft;
+	} else {
+	  return counterRight;
+	  }
+  
+  
+  
+  
+  
+  }
+  
+  
+  
+  
 }
+
+

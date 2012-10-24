@@ -15,9 +15,12 @@ public class TreeScript {
  myTree.add(11);
  myTree.add(12);
  myTree.add(8);
+ myTree.add(25);
+ System.out.println(myTree.toString());
  
  System.out.println(myTree.contains(10));
  System.out.println(myTree.getMax());
+ System.out.println(myTree.depth());
  }
  
 }
